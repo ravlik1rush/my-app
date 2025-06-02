@@ -4,9 +4,10 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Віддаємо всі файли зі змінної папки (наприклад — поточної)
 app.use(express.static(path.join(__dirname)));
 
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🎵 Сервер запущено на порту ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
+
